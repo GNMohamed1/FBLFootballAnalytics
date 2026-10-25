@@ -1,0 +1,35 @@
+# Data: keep out of the repo (third-party terms). Rebuild with the scripts.
+data/raw/*
+data/processed/*
+*.db
+*.sqlite
+*.sqlite3
+*.csv
+*.parquet
+
+# Keep the folder structure and the data documentation
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/README.md
+
+# Dashboards: workbooks can embed source data. Commit only data-free versions.
+*.pbix
+*.twbx
+*.hyper
+*.tde
+!dashboards/**/*_nodata.pbix
+!dashboards/**/*_nodata.twbx
+
+# Python / Jupyter
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+.env
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
